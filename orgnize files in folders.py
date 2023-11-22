@@ -6,15 +6,15 @@ import schedule
 import time                                                           
 
 
-def claen_path(enter_path=False):
+def claen_path(enter_path=False):                                        
     if enter_path:
-          user_path=input("Enter path")
+          user_path=input("Enter path") 
           os.chdir(user_path)
     else:
-          user_path="D:\\Python Automation\\data"      
+          user_path="D:\\Python Automation\\data"                          #defualt path    
           
                 
-                                                        #change path  directory
+                                                                           #change path  directory
 
     for file in os.listdir('.'):                                           #to loop in cuurent directory data ,'.' mean the current path
         if file.endswith(('.png','jpg','jpeg','webp')):                    #determin type of files by file extension .png,to group the same type use tuple with endwith()  
@@ -39,4 +39,4 @@ def claen_path(enter_path=False):
           
 
 claen_path()
-schedule.every(10).seconds.do(claen_path())
+schedule.every(10).seconds.do(claen_path())                              #repeat calling the fun ebery 10 sec
