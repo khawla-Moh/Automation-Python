@@ -1,3 +1,4 @@
+#using TWILIO to send SMS message
 from twilio.rest import Client
 
 account_sid = 'AC94176aae8a63d803065ad3e315bc7276'
